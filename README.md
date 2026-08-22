@@ -12,6 +12,12 @@ A tested Python and Streamlit decision system for comparing private-market funds
 
 The application uses synthetic or anonymized demonstration inputs and is designed for transparent assumption analysis rather than return prediction.
 
+### [Mutual Fund Ranking Pipeline](https://github.com/jbhattac2323/mutual-fund-ranking-pipeline)
+
+A privacy-safe Python case study extracted from an advisor-facing research prototype. It screens a synthetic fund universe, normalizes rolling-return and Sharpe observations within peer categories, produces configurable weighted rankings, and reports every exclusion reason for auditability.
+
+**Methods:** universe construction, explicit eligibility rules, midrank percentiles, category-relative scoring, deterministic tie handling, data-governance boundaries, and unit-tested methodology.
+
 ### [Regression Diagnostics and Evapotranspiration Forecasting](https://github.com/jbhattac2323/regression-time-series-forecasting)
 
 An applied R project combining multivariate regression, transformations, residual diagnostics, AIC-based model selection, time-series decomposition, and ARIMA forecasting with prediction intervals.
@@ -33,10 +39,10 @@ A hydrology analysis that joins gauge observations to site-specific thresholds, 
 | Area | Tools and methods |
 |---|---|
 | Programming | Python, R, SQL-oriented data modeling |
-| Statistical analysis | Regression diagnostics, transformations, correlation, model selection, uncertainty intervals |
+| Statistical analysis | Regression diagnostics, transformations, peer-relative normalization, correlation, model selection, uncertainty intervals |
 | Time series | Seasonal decomposition, autoregressive models, ARIMA forecasting |
-| Quantitative finance | Cash-flow modeling, XIRR, investment multiples, scenario analysis, Monte Carlo |
-| Data engineering | Validation rules, joins, reproducible pipelines, sensor quality control |
+| Quantitative finance | Cash-flow modeling, XIRR, investment multiples, fund screening, scenario analysis, Monte Carlo |
+| Data engineering | Validation rules, joins, reproducible pipelines, provenance, sensor quality control |
 | Software quality | Unit, integration, and regression tests; CI; Docker; audit-ready Excel exports |
 
 ## Current direction
