@@ -22,7 +22,7 @@ The public repo uses synthetic fund observations and has automated tests for thr
 
 To me, alternative-data work means using several imperfect sources together and checking whether they support the same conclusion.
 
-### [Golf Courses, Climate, and Water-Use Signals](https://github.com/jbhattac2323/evapotranspiration-land-cover-analysis)
+### [Golf Courses, Climate, and Water-Use Signals](https://github.com/jbhattac2323/golf-course-water-signals)
 
 I compared golf-course evapotranspiration with forest, urban, residential, and desert-adjacent sites, then joined the series to NOAA temperature and precipitation. The goal was to see whether ET could provide a useful water-demand signal across New York and Arizona.
 
