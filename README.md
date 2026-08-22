@@ -1,73 +1,61 @@
-# Quantitative Analysis Portfolio
+# Quant, Alternative Data, and Applied Statistics
 
-A curated portfolio spanning financial modeling, alternative data, statistical analysis, time-series methods, data quality, and reproducible analytical software.
+I am interested in problems where the answer is not sitting in one clean dataset. The projects here use financial cash flows, fund metrics, environmental sensors, weather records, and time series to build evidence from incomplete information.
 
-## Alternative data and triangulation
+There are three main threads.
 
-A recurring research theme is extracting defensible signals from unconventional or fragmented data. My approach is to:
+## Finance and decision tools
 
-1. define what each dataset measures—and what it only approximates;
-2. validate provenance, coverage, timing, and missingness before modeling;
-3. triangulate independent sources or comparison groups;
-4. quantify uncertainty and sensitivity; and
-5. connect the resulting signal to a concrete decision without presenting correlation as causation.
+### [Private Markets Fund Comparison](https://fundperformanceframework.streamlit.app/)
 
-The golf-course sustainability study is the clearest environmental example: site-level evapotranspiration is treated as a proxy for landscape water demand, NOAA temperature and precipitation provide climate context, nearby land-cover types provide benchmarks, and New York–Arizona comparisons test whether observed patterns persist across very different climates. The analysis does **not** claim to measure irrigation withdrawals directly.
+I built this to compare funds when cash-flow timing, fees, strategy mix, and terminal value all differ. It calculates XIRR and investment multiples, runs deterministic and Monte Carlo scenarios, tests when the preferred fund changes, and exports an Excel audit.
 
-## Featured work
-
-### [Private Markets Fund Performance & Fee Comparison Framework](https://fundperformanceframework.streamlit.app/)
-
-A tested Python and Streamlit decision system for comparing private-market funds.
-
-**Methods:** dated cash-flow analysis, XIRR, DPI/RVPI/TVPI, deterministic scenarios, exact Shapley attribution, decision-switch thresholds, paired Monte Carlo simulation with correlated drivers, sensitivity diagnostics, and formula-backed Excel reconciliation.
-
-The application uses synthetic or anonymized demonstration inputs and is designed for transparent assumption analysis rather than return prediction.
+The demo uses synthetic or anonymized inputs. It is a decision model, not a return forecast.
 
 ### [Mutual Fund Ranking Pipeline](https://github.com/jbhattac2323/mutual-fund-ranking-pipeline)
 
-A privacy-safe Python case study extracted from an advisor-facing research prototype. It screens a synthetic fund universe, normalizes rolling-return and Sharpe observations within peer categories, produces configurable weighted rankings, and reports every exclusion reason for auditability.
+This is the publishable quantitative core of a larger fund-finder prototype. It applies eligibility rules first, then ranks funds against peers using rolling-return and Sharpe percentile scores. It also keeps a separate record of exclusions so the ranking is easier to inspect.
 
-**Methods:** universe construction, explicit eligibility rules, midrank percentiles, category-relative scoring, deterministic tie handling, data-governance boundaries, and unit-tested methodology.
+The public repo uses synthetic fund observations and has automated tests for thresholds, ties, weighting, and peer-group logic.
 
-### [Regression Diagnostics and Evapotranspiration Forecasting](https://github.com/jbhattac2323/regression-time-series-forecasting)
+## Alternative data and environmental signals
 
-An applied R project combining multivariate regression, transformations, residual diagnostics, AIC-based model selection, time-series decomposition, and ARIMA forecasting with prediction intervals.
+To me, alternative-data work means using several imperfect sources together and checking whether they support the same conclusion.
 
-### [Environmental Sensor Quality-Control Pipeline](https://github.com/jbhattac2323/environmental-sensor-quality-control)
+### [Golf Courses, Climate, and Water-Use Signals](https://github.com/jbhattac2323/evapotranspiration-land-cover-analysis)
 
-An R workflow for converting raw weather-station telemetry into trustworthy analytical evidence using physical bounds, sensor tilt, battery state, temperature-dependent precipitation screening, missingness checks, and sampling-interval diagnostics.
+I compared golf-course evapotranspiration with forest, urban, residential, and desert-adjacent sites, then joined the series to NOAA temperature and precipitation. The goal was to see whether ET could provide a useful water-demand signal across New York and Arizona.
 
-### [Golf-Course Water Sustainability Through Alternative Data](https://github.com/jbhattac2323/evapotranspiration-land-cover-analysis)
+The important limit is that ET is not metered irrigation. The project is useful because it combines sources and comparison groups, not because one proxy answers the whole question.
 
-An exploratory R time-series study that triangulates site-level evapotranspiration, NOAA climate observations, nearby land-cover benchmarks, and cross-region comparisons. ET is used as a proxy for landscape water demand—not as a direct measure of irrigation withdrawals—to examine how golf-course water signals vary by season and climate context.
+### [Environmental Sensor Quality Control](https://github.com/jbhattac2323/environmental-sensor-quality-control)
 
-**Methods:** multi-source joins, temporal aggregation, seasonal decomposition, proxy validation, benchmark construction, distributional comparison, and correlation analysis with explicit causal limits.
+Raw station data can look precise while still being wrong. This R workflow checks physical bounds, sensor tilt, battery state, missingness, and sampling intervals before using the observations.
 
-### [Flood-Stage Monitoring in R](https://github.com/jbhattac2323/flood-stage-monitoring)
+### [Flood-Stage Monitoring](https://github.com/jbhattac2323/flood-stage-monitoring)
 
-A hydrology analysis that joins gauge observations to site-specific thresholds, detects the first crossing of action and flood stages, and measures major-stage exceedance.
+This project joins river-gauge readings to site-specific thresholds, finds the first action and flood-stage crossings, and measures major-stage exceedance.
 
-## Coursework archive
+### [Climate, Emissions, and Space-Data Visualization](https://github.com/jbhattac2323/climate-emissions-visualization)
 
-### [Introductory Python Course Projects](https://github.com/jbhattac2323/intro-python-course-projects)
+A visualization-focused R exercise using long-run emissions, temperature anomalies, and space-launch records. These are separate descriptive questions; I do not treat space activity as an explanation for climate trends.
 
-An openly labeled CPSCI 101 archive covering audio remixing, NLTK-based text analysis, CSV-grid validation, pixel-level image processing, and web scraping. Shared-author submissions, course materials, personal contact details, full literary texts, and media with uncertain reuse rights are excluded.
+## Statistical foundations
 
-## Technical toolkit
+### [Regression and Time-Series Forecasting](https://github.com/jbhattac2323/regression-time-series-forecasting)
 
-| Area | Tools and methods |
-|---|---|
-| Programming | Python, R, SQL-oriented data modeling |
-| Alternative data | Source triangulation, proxy validation, provenance, benchmark construction, coverage and missingness diagnostics |
-| Statistical analysis | Regression diagnostics, transformations, peer-relative normalization, correlation, model selection, uncertainty intervals |
-| Time series | Seasonal decomposition, autoregressive models, ARIMA forecasting |
-| Quantitative finance | Cash-flow modeling, XIRR, investment multiples, fund screening, scenario analysis, Monte Carlo |
-| Data engineering | Validation rules, joins, reproducible pipelines, provenance, sensor quality control |
-| Software quality | Unit, integration, and regression tests; CI; Docker; audit-ready Excel exports |
+My strongest R coursework project. It covers transformations, multivariate regression, residual diagnostics, AIC-based selection, seasonal decomposition, autoregressive models, ARIMA forecasting, and prediction intervals.
 
-## Current direction
+### [R Environmental Data Fundamentals](https://github.com/jbhattac2323/r-environmental-data-fundamentals)
 
-I am developing this portfolio for quantitative-analyst roles and data-science-oriented graduate study. The next phase is to extend the alternative-data theme with research-grade projects that use explicit train/validation/test design, signal-stability analysis, stronger causal or predictive evaluation, and concise write-ups connecting evidence to decisions.
+An early R exercise in vectorized calculations, unit conversion, data frames, indexing, and subsetting.
 
-> Course exercises are labeled honestly as instructional work. Project READMEs distinguish reproducible results from archived analyses and state important statistical limitations.
+## Early Python work
+
+### [Introductory Python Projects](https://github.com/jbhattac2323/intro-python-course-projects)
+
+A clearly labeled course archive covering audio processing, text analysis, CSV grids, image manipulation, and web scraping. I kept it separate because it shows where I started, not where my quantitative work is now.
+
+## What I am building toward
+
+The next step is a finance-focused alternative-data project with a real validation design: a signal defined before testing, a clean train/validation split, stability checks through time, and a short write-up connecting the result to an actual decision.
