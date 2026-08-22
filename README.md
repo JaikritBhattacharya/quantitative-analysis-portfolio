@@ -34,6 +34,12 @@ An exploratory time-series study comparing golf-course, forest, urban, residenti
 
 A hydrology analysis that joins gauge observations to site-specific thresholds, detects the first crossing of action and flood stages, and measures major-stage exceedance.
 
+## Coursework archive
+
+### [Introductory Python Course Projects](https://github.com/jbhattac2323/intro-python-course-projects)
+
+An openly labeled CPSCI 101 archive covering NLTK-based text analysis, CSV-grid validation, pixel-level image processing, and web scraping. Shared-author submissions, course materials, personal contact details, full literary texts, and media with uncertain reuse rights are excluded.
+
 ## Technical toolkit
 
 | Area | Tools and methods |
