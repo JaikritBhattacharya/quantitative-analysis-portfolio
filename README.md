@@ -1,6 +1,18 @@
 # Quantitative Analysis Portfolio
 
-A curated index of projects spanning financial modeling, statistical analysis, time-series methods, data quality, and reproducible analytical software.
+A curated portfolio spanning financial modeling, alternative data, statistical analysis, time-series methods, data quality, and reproducible analytical software.
+
+## Alternative data and triangulation
+
+A recurring research theme is extracting defensible signals from unconventional or fragmented data. My approach is to:
+
+1. define what each dataset measures—and what it only approximates;
+2. validate provenance, coverage, timing, and missingness before modeling;
+3. triangulate independent sources or comparison groups;
+4. quantify uncertainty and sensitivity; and
+5. connect the resulting signal to a concrete decision without presenting correlation as causation.
+
+The golf-course sustainability study is the clearest environmental example: site-level evapotranspiration is treated as a proxy for landscape water demand, NOAA temperature and precipitation provide climate context, nearby land-cover types provide benchmarks, and New York–Arizona comparisons test whether observed patterns persist across very different climates. The analysis does **not** claim to measure irrigation withdrawals directly.
 
 ## Featured work
 
@@ -24,11 +36,13 @@ An applied R project combining multivariate regression, transformations, residua
 
 ### [Environmental Sensor Quality-Control Pipeline](https://github.com/jbhattac2323/environmental-sensor-quality-control)
 
-An R workflow for validating weather-station observations using physical bounds, sensor tilt, battery state, temperature-dependent precipitation screening, missingness checks, and sampling-interval diagnostics.
+An R workflow for converting raw weather-station telemetry into trustworthy analytical evidence using physical bounds, sensor tilt, battery state, temperature-dependent precipitation screening, missingness checks, and sampling-interval diagnostics.
 
-### [Evapotranspiration Across Climate and Land-Cover Contexts](https://github.com/jbhattac2323/evapotranspiration-land-cover-analysis)
+### [Golf-Course Water Sustainability Through Alternative Data](https://github.com/jbhattac2323/evapotranspiration-land-cover-analysis)
 
-An exploratory time-series study comparing golf-course, forest, urban, residential, and desert-adjacent sites in New York and Arizona. The analysis decomposes monthly ET and joins site results to monthly NOAA temperature and precipitation.
+An exploratory R time-series study that triangulates site-level evapotranspiration, NOAA climate observations, nearby land-cover benchmarks, and cross-region comparisons. ET is used as a proxy for landscape water demand—not as a direct measure of irrigation withdrawals—to examine how golf-course water signals vary by season and climate context.
+
+**Methods:** multi-source joins, temporal aggregation, seasonal decomposition, proxy validation, benchmark construction, distributional comparison, and correlation analysis with explicit causal limits.
 
 ### [Flood-Stage Monitoring in R](https://github.com/jbhattac2323/flood-stage-monitoring)
 
@@ -38,13 +52,14 @@ A hydrology analysis that joins gauge observations to site-specific thresholds, 
 
 ### [Introductory Python Course Projects](https://github.com/jbhattac2323/intro-python-course-projects)
 
-An openly labeled CPSCI 101 archive covering NLTK-based text analysis, CSV-grid validation, pixel-level image processing, and web scraping. Shared-author submissions, course materials, personal contact details, full literary texts, and media with uncertain reuse rights are excluded.
+An openly labeled CPSCI 101 archive covering audio remixing, NLTK-based text analysis, CSV-grid validation, pixel-level image processing, and web scraping. Shared-author submissions, course materials, personal contact details, full literary texts, and media with uncertain reuse rights are excluded.
 
 ## Technical toolkit
 
 | Area | Tools and methods |
 |---|---|
 | Programming | Python, R, SQL-oriented data modeling |
+| Alternative data | Source triangulation, proxy validation, provenance, benchmark construction, coverage and missingness diagnostics |
 | Statistical analysis | Regression diagnostics, transformations, peer-relative normalization, correlation, model selection, uncertainty intervals |
 | Time series | Seasonal decomposition, autoregressive models, ARIMA forecasting |
 | Quantitative finance | Cash-flow modeling, XIRR, investment multiples, fund screening, scenario analysis, Monte Carlo |
@@ -53,6 +68,6 @@ An openly labeled CPSCI 101 archive covering NLTK-based text analysis, CSV-grid 
 
 ## Current direction
 
-I am developing a portfolio for quantitative-analyst roles and data-science-oriented graduate study. The next phase is to add research-grade projects with explicit train/validation/test design, stronger causal or predictive evaluation, and concise technical write-ups that connect methods to decisions.
+I am developing this portfolio for quantitative-analyst roles and data-science-oriented graduate study. The next phase is to extend the alternative-data theme with research-grade projects that use explicit train/validation/test design, signal-stability analysis, stronger causal or predictive evaluation, and concise write-ups connecting evidence to decisions.
 
 > Course exercises are labeled honestly as instructional work. Project READMEs distinguish reproducible results from archived analyses and state important statistical limitations.
