@@ -12,19 +12,19 @@ A tested Python and Streamlit decision system for comparing private-market funds
 
 The application uses synthetic or anonymized demonstration inputs and is designed for transparent assumption analysis rather than return prediction.
 
-### [Regression Diagnostics and Evapotranspiration Forecasting](https://github.com/jbhattac2323/ENVST_325_activity7)
+### [Regression Diagnostics and Evapotranspiration Forecasting](https://github.com/jbhattac2323/regression-time-series-forecasting)
 
 An applied R project combining multivariate regression, transformations, residual diagnostics, AIC-based model selection, time-series decomposition, and ARIMA forecasting with prediction intervals.
 
-### [Environmental Sensor Quality-Control Pipeline](https://github.com/jbhattac2323/ENVST_325_activity4)
+### [Environmental Sensor Quality-Control Pipeline](https://github.com/jbhattac2323/environmental-sensor-quality-control)
 
 An R workflow for validating weather-station observations using physical bounds, sensor tilt, battery state, temperature-dependent precipitation screening, missingness checks, and sampling-interval diagnostics.
 
-### [Evapotranspiration Across Climate and Land-Cover Contexts](https://github.com/jbhattac2323/ENVSTFinal)
+### [Evapotranspiration Across Climate and Land-Cover Contexts](https://github.com/jbhattac2323/evapotranspiration-land-cover-analysis)
 
 An exploratory time-series study comparing golf-course, forest, urban, residential, and desert-adjacent sites in New York and Arizona. The analysis decomposes monthly ET and joins site results to monthly NOAA temperature and precipitation.
 
-### [Flood-Stage Monitoring in R](https://github.com/jbhattac2323/ENVST_325_activity2)
+### [Flood-Stage Monitoring in R](https://github.com/jbhattac2323/flood-stage-monitoring)
 
 A hydrology analysis that joins gauge observations to site-specific thresholds, detects the first crossing of action and flood stages, and measures major-stage exceedance.
 
