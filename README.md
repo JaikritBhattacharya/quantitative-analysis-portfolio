@@ -12,6 +12,12 @@ I built this to compare funds when cash-flow timing, fees, strategy mix, and ter
 
 The demo uses synthetic or anonymized inputs. It is a decision model, not a return forecast.
 
+### [Credit Fundamentals & Analytics](https://credit-fundamentals-analytics.onrender.com/)
+
+A credit analysis framework that automatically gathers SEC financials, computes peer comparisons, and flags accounting warning signs informed by *The Credit Investor’s Handbook*. Gradient-boosted machine learning identifies bankruptcy-related financial patterns, Shapley analysis explains the drivers, and Monte Carlo simulations test cash flow across 5,000 scenarios per case. Proposed-loan analysis covers repayment, contractual returns, and recovery, with core financial calculations exported to a formula-linked Excel workbook.
+
+[Explore the live framework](https://credit-fundamentals-analytics.onrender.com/) · Public technology-company training data · Private-company financial uploads
+
 ### [Mutual Fund Ranking Pipeline](https://github.com/JaikritBhattacharya/mutual-fund-ranking-pipeline)
 
 This is the publishable quantitative core of a larger fund-finder prototype. It applies eligibility rules first, then ranks funds against peers using rolling-return and Sharpe percentile scores. It also keeps a separate record of exclusions so the ranking is easier to inspect.
@@ -58,4 +64,4 @@ A clearly labeled course archive covering audio processing, text analysis, CSV g
 
 ## What I am building toward
 
-The next step is a finance-focused alternative-data project with a real validation design: a signal defined before testing, a clean train/validation split, stability checks through time, and a short write-up connecting the result to an actual decision.
+The credit framework brings together automated financial analysis, explainable machine learning, and downside simulation. A further direction is to train and validate models with proprietary borrower histories and alternative data, testing whether collections, renewals, backlog, and funding behaviour reveal credit signals beyond traditional ratios.
